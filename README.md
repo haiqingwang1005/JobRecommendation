@@ -79,8 +79,8 @@
 3. Save and quit vim editor, and use the 'ls' to make sure both Dockerfile and job.war are in the current directory.
 4. Run the following command to build an image named "job".
    ```bash
-   #sudo docker build -t <image_name>
-   sudo docker build -t job
+   #sudo docker build -t <image_name> .
+   sudo docker build -t job .
    ```
 5. (optional) you can use the following command to check existing images.
 `sudo docker images`
@@ -95,7 +95,8 @@
 `sudo docker logs <container_id>`
 5. Optional) To stop your Docker container, use the following command. You can find the comtainer_id in step 2.
 `sudo docker stop <container_id>`
-6. (optional) You can also use the following command to remove an existing container or image.
+6. (optional) You can use the command to stop a running container: `sudo docker stop <container_id>`
+7. (optional) You can also use the following command to remove an existing container or image.
 `sudo docker rm <container_id>`
 `sudo docker rmi <image_name>`
 
